@@ -1,5 +1,5 @@
 <template>
-  <div>初始化</div>
+  <div>Frank</div>
 </template>
 
 <script>

@@ -1,17 +1,19 @@
 <template>
   <div>
-    <router-link to="frank">frank</router-link>
+    <router-link to="/">frank</router-link> |
+    <router-link to="home">Home</router-link>
     <router-view />
   </div>
 </template>
 
 <script>
-import Frank from "./components/Frank.vue";
+import { provide, ref } from "vue";
 
 export default {
   name: "App",
-  components: {
-    Frank,
+  setup() {
+    const menuVisible = ref(false);
+    provide("menuVisible", menuVisible);
   },
 };
 </script>
